@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Arrivals from './components/Arrivals'
 import Model from './components/Model'
 import BestSeller from './components/BestSeller'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Arrivals></Arrivals>
           <Model></Model>
           <BestSeller></BestSeller>
+          <Footer></Footer>
       </div>
     </>
   )

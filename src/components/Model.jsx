@@ -2,7 +2,7 @@ import React from 'react'
 
 function Model() {
   return (
-    <div className="flex flex-col md:flex-row justify-center h-96 py-8 px-32 bg-rose-700">
+    <div className="flex flex-col md:flex-row justify-center h-96 py-8 px-32 bg-rose-600">
                     <div className="w-full md:w-1/2 p-4">
                         <img src="/model.jpg" alt="Woman wearing glasses" className="w-[510px] h-96" />
                         <div className="mt-4 relative bottom-32">
