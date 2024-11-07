@@ -3,8 +3,8 @@ import React from 'react'
 function Footer() {
   return (
     <>
-    {/* <hr className='border-zinc-700 border  mb-8 '/> */}
-    <div className="flex justify-around p-10 text-white bg-rose-600 mt-36">
+    
+    <div className="flex justify-around p-10 text-white bg-rose-400 ">
                     <div className='w-96'>
                         <h2 className="text-lg font-bold">Specs</h2>
                         <h1 className="text-2xl font-bold mt-2">Purpose and Functionality</h1>

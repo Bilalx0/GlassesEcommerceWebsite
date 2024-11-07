@@ -10,7 +10,7 @@ function BestSeller() {
 
                         </div>
                             <p className="text-base text-gray-700 w-[500px]">Embark on an optical journey that transcends mere vision; Optic Odyssey is an immersive exploration into the multifaceted world of eyewear.</p>
-                            <button className=" bg-rose-300 text-gray-900 font-semibold py-3 px-6 rounded-lg flex items-center">
+                            <button className=" bg-rose-300 text-gray-900 font-semibold py-3 px-6 rounded-lg flex items-center shadow-lg">
                                 <i className="fas fa-search mr-2"></i> Show Products
                             </button>
                     </div>

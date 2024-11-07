@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         john: ["Josefin Sans", "sans-serif"],
+        gistesy: ["Gistesy", "cursive"],
       }
     },
   },

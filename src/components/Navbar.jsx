@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="">
       <div className="max-w-7xl mx-auto px-12">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Left navigation items */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="/" className="text-gray-700 hover:text-gray-900">HOME</a>
@@ -22,19 +22,19 @@ const Navbar = () => {
 
           {/* Center logo */}
           <div className="flex-1 flex justify-center md:flex-none md:absolute md:left-1/2 md:-translate-x-1/2">
-            <a href="/" className="text-2xl font-bold">Tascara</a>
+            <a href="/" className="text-3xl text-rose-400 font-bold font-gistesy">Tascara</a>
           </div>
 
           {/* Right menu and cart */}
           <div className="flex items-center gap-5">
             <button 
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-gray-900 focus:outline-none flex gap-5"
+              className="text-black hover:text-gray-800 focus:outline-none flex gap-5 bg-rose-300 p-2 rounded-full shadow-lg"
             >
-              <span className="block">Menu</span>
+              
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-            <a href="/cart" className="text-gray-700 hover:text-gray-900">
+            <a href="/cart" className="text-black hover:text-gray-800 bg-rose-300 p-2 rounded-full shadow-lg">
               <ShoppingBag size={24} />
             </a>
           </div>
