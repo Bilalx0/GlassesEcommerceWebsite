@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="">
-      <div className="max-w-7xl mx-auto px-12">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-20">
           {/* Left navigation items */}
           <div className="hidden md:flex items-center space-x-8">
@@ -21,7 +21,7 @@ const Navbar = () => {
           </div>
 
           {/* Center logo */}
-          <div className="flex-1 flex justify-center md:flex-none md:absolute md:left-1/2 md:-translate-x-1/2">
+          <div className="flex justify-center md:flex-none md:absolute md:left-1/2 md:-translate-x-1/2">
             <a href="/" className="text-3xl text-rose-400 font-bold font-gistesy">Tascara</a>
           </div>
 
