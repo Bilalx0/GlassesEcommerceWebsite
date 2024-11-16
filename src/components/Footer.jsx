@@ -4,8 +4,8 @@ function Footer() {
   return (
     <>
     
-    <div className="flex justify-around p-10 text-white bg-rose-400 ">
-                    <div className='w-96'>
+    <div className="flex flex-col lg:flex-row lg:justify-between gap-10 px-5 py-10 text-white bg-rose-400 ">
+                    <div className='w-full lg:w-96'>
                         <h2 className="text-lg font-bold">Specs</h2>
                         <h1 className="text-2xl font-bold mt-2">Purpose and Functionality</h1>
                         <p className="mt-2">Glasses play a crucial role in eye health. Regular eye check-ups and the right prescription ensure optimal vision, preventing eye strain, headaches, and other related issues.</p>
@@ -33,7 +33,7 @@ function Footer() {
                     </div>
                     <div>
                         <h2 className="text-lg font-bold">SHARE</h2>
-                        <p className="mt-2 w-96">Social sharing describes when social media users broadcast web content on a social network to their connections</p>
+                        <p className="mt-2 w-full lg:w-96">Social sharing describes when social media users broadcast web content on a social network to their connections</p>
                         <div className="flex mt-4 space-x-2">
                             
                             <div className="bg-rose-300 p-2 rounded">
@@ -63,10 +63,10 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <div class=" text-gray-400 font-normal py-8 px-20 flex justify-between">
-    <span>© Copyright 2024 Tascara. All right reserved. Developed by <span class="text-black py-1 hover:text-custom-red cursor-pointer"> M . Bilal</span></span>
+                <div class=" text-gray-400 font-normal py-8 px-5 flex flex-col md:flex-row items-center gap-4">
+    <span className='text-center'>Copyright © 2024 Tascara. All right reserved. Developed by <span class="text-black py-1 hover:text-custom-red cursor-pointer"> M . Bilal</span></span>
     <span class="flex gap-4">
-      <span class="border-r border-gray-300 px-4">Terms & Conditions</span>
+      <span class="border-r border-gray-300 pr-4">Terms & Conditions</span>
       <span>Policy</span>
     </span>
   </div>

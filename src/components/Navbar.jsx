@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="mx-auto px-6 sm:px-12 lg:px-24">
         <div className="flex justify-between items-center h-20">
           {/* Left navigation items */}
           <div className="hidden md:flex items-center space-x-8">

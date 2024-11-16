@@ -1,20 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-function Cards(props) {
+const Cards = ({ 
+  image ,
+  title ,
+  subtitle ,
+  price ,
+  originalPrice ,
+  colorOptions // green, red, pink
+}) => {
+  const [selectedColor, setSelectedColor] = useState(colorOptions[0]);
+
   return (
-                        <div className="bg-white p-6 rounded-lg shadow-md">
-                            <div className="flex justify-between items-center mb-4">
-                                <span className="bg-gray-200 text-gray-700 text-xs font-semibold px-2 py-1 rounded">Best Sellers</span>
-                                <span className="text-gray-500 text-xs">3 Colours</span>
-                            </div>
-                            <img src={props.src} alt="Glasses - Best Sellers" className="w-full h-40 object-contain mb-4"/>
-                            <div className="text-gray-700 text-sm mb-1">AP2548 Optics</div>
-                            <div className="text-gray-500 text-xs mb-2">Alex Perry</div>
-                            <div className="text-xl font-bold">$187.99</div>
-                        </div>
-    
-      
-  )
-}
+    <div className="bg-white rounded-lg p-6 shadow-sm max-w-xs">
+      {/* Product Image */}
+      <div className="mb-6">
+        <img 
+          src={image} 
+          alt={title}
+          className="w-full h-auto object-contain"
+        />
+      </div>
 
-export default Cards
+      {/* Add to Cart Section */}
+      <div className="my-6">
+        <div className="flex items-center justify-between">
+          <span className="text-gray-600 text-lg font-medium border-b border-white transition-colors delay-100 hover:border-b hover:border-gray-600 cursor-pointer">ADD TO CART</span>
+          
+        </div>
+      </div>
+
+      {/* Product Details */}
+      <div className="flex justify-between items-start">
+        <div>
+          <h3 className="text-gray-800 text-lg font-medium">{title}</h3>
+          <p className="text-gray-500">{subtitle}</p>
+        </div>
+        <div className="text-right">
+          <span className="text-rose-600 font-bold text-xl">${price.toFixed(2)}</span>
+          <p className="text-gray-400 line-through text-sm">
+            ${originalPrice.toFixed(2)}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Cards;

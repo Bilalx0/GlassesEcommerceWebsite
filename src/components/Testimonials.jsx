@@ -1,55 +1,137 @@
-import React from 'react'
-import { FaArrowLeft , FaArrowRight , FaStar } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
-function Testimonials() {
+const Testimonials = () => {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Verified Buyer",
+      rating: 5,
+      text: "Absolutely love the quality of the products! The customer service was exceptional, and delivery was faster than expected. Will definitely be shopping here again.",
+    },
+    {
+      name: "Michael Chen",
+      role: "Regular Customer",
+      rating: 5,
+      text: "This has become my go-to online store. The website is easy to navigate, prices are competitive, and the product selection is outstanding.",
+    },
+    {
+      name: "Emma Thompson",
+      role: "Verified Buyer",
+      rating: 5,
+      text: "I was skeptical about ordering online, but this experience exceeded my expectations. The quality control is impressive, and returns process is hassle-free.",
+    },
+    {
+      name: "David Wilson",
+      role: "New Customer",
+      rating: 4,
+      text: "Great first experience with this store. The checkout process was smooth, and I received regular updates about my order status.",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    if (!isPaused) {
+      const timer = setInterval(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 5000); // Change slide every 5 seconds
+
+      return () => clearInterval(timer);
+    }
+  }, [isPaused, testimonials.length]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
-    <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 mt-28">
-                    <div className="text-start ml-4 flex justify-between items-center">
-                        <h2 className="text-4xl font-normal text-gray-800">Our Testimonials</h2>
-                    <div className="flex justify-end space-x-2">
-                        <button className="bg-rose-300 p-2 rounded-full shadow-lg">
-                        <FaArrowLeft />
-                        </button>
-                        <button className="bg-rose-300 p-2 rounded-full shadow-lg">
-                        <FaArrowRight />
-                        </button>
-                    </div>
-                    </div>
-                    <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="bg-white p-6 rounded-lg shadow-lg">
-                            <img className="w-full h-72 object-cover rounded-t-lg" src="/testimonial-2.jpg" alt="Portrait of a smiling woman" />
-                            <div className="mt-8">
-                                <div className="flex items-center">
-                                <FaStar className='text-yellow-500'/>
-                                <FaStar className='text-yellow-500'/>
-                                <FaStar className='text-yellow-500'/>
-                                    <FaStar className='text-gray-300'/>
-                                    <FaStar className='text-gray-300'/>
-                                </div>
-                                <p className="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <p className="mt-4 text-rose-400 font-bold">Michael smith</p>
-                                <p className="text-gray-500">Company ceo</p>
-                            </div>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow-lg">
-                            <img className="w-full h-72 object-cover rounded-t-lg" src="/testimonial-1.jpg" alt="Portrait of a man holding glasses" />
-                            <div className="mt-8">
-                                <div className="flex items-center">
-                                <FaStar className='text-yellow-500'/>
-                                <FaStar className='text-yellow-500'/>
-                                <FaStar className='text-yellow-500'/>
-                                    <FaStar className='text-gray-300'/>
-                                    <FaStar className='text-gray-300'/>
-                                </div>
-                                <p className="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <p className="mt-4 text-rose-400 font-bold">Ashley rosa</p>
-                                <p className="text-gray-500">Company ceo</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-  )
-}
+    <section
+      className="w-full"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      <div className=" mx-auto">
+        <h2 className="text-2xl sm:text-center font-semibold mb-12 text-gray-900">
+          What Our Customers Say
+        </h2>
 
-export default Testimonials
+        <div className="relative">
+          {/* Main testimonial content */}
+          <div className="overflow-hidden">
+            <div
+              className="transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              <div className="flex">
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className="w-full flex-shrink-0">
+                    <div className="bg-white rounded-lg p-8 shadow-lg mx-auto max-w-2xl">
+                      {/* Testimonial text */}
+                      <p className="text-gray-700 mb-6 text-lg italic">
+                        "{testimonial.text}"
+                      </p>
+
+                      {/* Customer info */}
+                      <div>
+                        <p className="font-semibold text-gray-900">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-gray-600">{testimonial.role}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-8 p-2 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-600" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-8 p-2 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="w-6 h-6 text-gray-600" />
+          </button>
+
+          {/* Slide indicators */}
+          <div className="flex justify-center mt-8 gap-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  index === currentIndex ? "bg-gray-800" : "bg-gray-300"
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;
