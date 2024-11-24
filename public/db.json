@@ -1,0 +1,22 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Classic Aviator",
+        "price": 99.99,
+        "description": "Timeless aviator style sunglasses with gold frames...",
+        "image": "/images/aviator.jpg",
+        "stock": 10,
+        "category": "sunglasses"
+      },
+      {
+        "id": 2,
+        "name": "Vintage Round",
+        "price": 79.99,
+        "description": "Retro-inspired round frames...",
+        "image": "/images/vintage-round.jpg",
+        "stock": 15,
+        "category": "optical"
+      }
+    ]
+  }

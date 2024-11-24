@@ -1,25 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Cards from '../components/Cards';
 
 const Products = () => {
-  const [products] = useState([
-    {
-      id: 1,
-      name: "Kids Round Frame Sunglasses",
-      price: 99.00,
-      category: "Kids Glasses",
-      image: "/api/placeholder/200/200",
-      inStock: true
-    },
-    {
-      id: 2,
-      name: "Cat Eye Kids Sunglasses",
-      price: 79.00,
-      originalPrice: 99.00,
-      category: "Kids Glasses",
-      image: "/api/placeholder/200/200",
-      inStock: true
-    }
-  ]);
+
 
   const [filters, setFilters] = useState({
     availability: [],
@@ -50,6 +33,9 @@ const Products = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
+      <div>
+        
+      </div>
       <div className="flex gap-8">
         {/* Filters Sidebar */}
         <div className="w-64 flex-shrink-0">
@@ -125,32 +111,42 @@ const Products = () => {
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map(product => (
-              <div key={product.id} className="border rounded-lg p-4">
-                <div className="mb-4">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-48 object-cover rounded"
-                  />
-                </div>
-                <div className="text-center">
-                  <div className="text-xs text-cyan-400 mb-1">{product.category}</div>
-                  <h3 className="font-medium mb-2">{product.name}</h3>
-                  <div className="flex justify-center items-center gap-2 mb-4">
-                    <span className="font-semibold">${product.price.toFixed(2)}</span>
-                    {product.originalPrice && (
-                      <span className="text-gray-400 line-through">
-                        ${product.originalPrice.toFixed(2)}
-                      </span>
-                    )}
-                  </div>
-                  <button className="w-full bg-cyan-400 text-white py-2 px-4 rounded hover:bg-cyan-500 transition-colors">
-                    Add To Cart
-                  </button>
-                </div>
-              </div>
-            ))}
+          <Cards  image="/arrivel-1.jpg" 
+  title="Full rim square"
+  subtitle="Glasses"
+  price={25.00}
+  originalPrice={45.00}
+  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
+  <Cards  image="/arrivel-1.jpg" 
+  title="Full rim square"
+  subtitle="Glasses"
+  price={25.00}
+  originalPrice={45.00}
+  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
+  <Cards  image="/arrivel-1.jpg" 
+  title="Full rim square"
+  subtitle="Glasses"
+  price={25.00}
+  originalPrice={45.00}
+  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
+  <Cards  image="/arrivel-1.jpg" 
+  title="Full rim square"
+  subtitle="Glasses"
+  price={25.00}
+  originalPrice={45.00}
+  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
+  <Cards  image="/arrivel-1.jpg" 
+  title="Full rim square"
+  subtitle="Glasses"
+  price={25.00}
+  originalPrice={45.00}
+  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
+  <Cards  image="/arrivel-1.jpg" 
+  title="Full rim square"
+  subtitle="Glasses"
+  price={25.00}
+  originalPrice={45.00}
+  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
           </div>
         </div>
       </div>

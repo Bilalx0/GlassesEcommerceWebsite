@@ -1,18 +1,16 @@
 import React from 'react'
-import Home from './pages/Home'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import './App.css'
+import { Outlet } from 'react-router-dom'
 
-function App() {
-
+function Layout() {
   return (
     <>
     <Navbar />
-     <Home />
-     <Footer />
+    <Outlet />
+    <Footer />
     </>
   )
 }
 
-export default App
+export default Layout

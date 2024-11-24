@@ -11,7 +11,7 @@ const Cards = ({
   const [selectedColor, setSelectedColor] = useState(colorOptions[0]);
 
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm max-w-xs">
+    <div className="bg-white rounded-lg p-6 shadow-lg max-w-xs">
       {/* Product Image */}
       <div className="mb-6">
         <img 
