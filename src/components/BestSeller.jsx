@@ -1,7 +1,16 @@
 import React from 'react'
 import Cards from './Cards' 
+import { DataContext } from '../context/DataContext';
+import { useContext } from 'react';
 
 function BestSeller() {
+  const { products } = useContext(DataContext);
+
+  
+
+  // Show only the first 3 products
+  const limitedProducts = products.slice(0, 6);
+
   return (
     <div className="" >
                     <div className="flex  justify-between lg:items-center flex-col lg:flex-row">
@@ -15,43 +24,9 @@ function BestSeller() {
                             </button>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-y-12 mt-20'>
-                    <Cards  image="/arrivel-1.jpg" 
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
-                    <Cards  image="/arrivel-2.jpg"
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
-                    <Cards  image="/arrivel-3.jpg"
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
-                    <Cards  image="/arrivel-1.jpg"
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
-                    <Cards  image="/arrivel-3.jpg"
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
-                    <Cards  image="/arrivel-2.jpg"
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
-                    
+                    {limitedProducts.map((product) => (
+        <Cards key={product.id} product={product} />
+      ))}
                     </div>
     </div>
   )

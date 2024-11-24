@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Cards from '../components/Cards';
+import { DataContext } from '../context/DataContext';
+import { useContext } from 'react';
 
 const Products = () => {
-
+  const { products } = useContext(DataContext);
 
   const [filters, setFilters] = useState({
     availability: [],
@@ -111,42 +113,9 @@ const Products = () => {
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Cards  image="/arrivel-1.jpg" 
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
-  <Cards  image="/arrivel-1.jpg" 
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
-  <Cards  image="/arrivel-1.jpg" 
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
-  <Cards  image="/arrivel-1.jpg" 
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
-  <Cards  image="/arrivel-1.jpg" 
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
-  <Cards  image="/arrivel-1.jpg" 
-  title="Full rim square"
-  subtitle="Glasses"
-  price={25.00}
-  originalPrice={45.00}
-  colorOptions={['#00FF00', '#FF0000', '#FFC0CB']}/>
+          {products.map((product) => (
+        <Cards key={product.id} product={product} />
+      ))}
           </div>
         </div>
       </div>

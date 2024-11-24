@@ -1,22 +1,115 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Classic Aviator",
-        "price": 99.99,
-        "description": "Timeless aviator style sunglasses with gold frames...",
-        "image": "/images/aviator.jpg",
-        "stock": 10,
-        "category": "sunglasses"
-      },
-      {
-        "id": 2,
-        "name": "Vintage Round",
-        "price": 79.99,
-        "description": "Retro-inspired round frames...",
-        "image": "/images/vintage-round.jpg",
-        "stock": 15,
-        "category": "optical"
-      }
-    ]
-  }
+  "categories": [
+    {
+      "id": 1,
+      "name": "Men's Glasses",
+      "description": "Stylish and durable glasses for men."
+    },
+    {
+      "id": 2,
+      "name": "Women's Glasses",
+      "description": "Elegant and trendy glasses for women."
+    },
+    {
+      "id": 3,
+      "name": "Kids' Glasses",
+      "description": "Lightweight and comfortable glasses for kids."
+    },
+    {
+      "id": 4,
+      "name": "Sunglasses",
+      "description": "Protective and fashionable sunglasses for everyone."
+    }
+  ],
+  "products": [
+    {
+      "id": 101,
+      "name": "Classic Aviator",
+      "category": "Sunglasses",
+      "price": 59.99,
+      "image": "/arrivel-2.jpg",
+      "description": "Timeless aviator sunglasses with UV protection.",
+      "stock": 25,
+      "rating": 4.5,
+      "originalPrice": 45.99
+    },
+    {
+      "id": 102,
+      "name": "Full rim square",
+      "category": "Glasses",
+      "price": 25.99,
+      "image": "/arrivel-3.jpg",
+      "description": "Stylish full rim square glasses.",
+      "stock": 40,
+      "rating": 4.2,
+      "originalPrice": 45.99
+    },
+    {
+      "id": 103,
+      "name": "Cat-Eye",
+      "category": "Women's Glasses",
+      "price": 45.99,
+      "image": "/arrivel-4.jpg",
+      "description": "Chic cat-eye glasses that enhance your look.",
+      "stock": 30,
+      "rating": 4.7,
+      "originalPrice": 45.99
+    },
+    {
+      "id": 104,
+      "name": "Round",
+      "category": "Kids' Glasses",
+      "price": 25.99,
+      "image": "/arrivel-4.jpg",
+      "description": "Fun and lightweight round glasses for kids.",
+      "stock": 50,
+      "rating": 4.4,
+      "originalPrice": 45.99
+    },
+    {
+      "id": 105,
+      "name": "Sports",
+      "category": "Sunglasses",
+      "price": 65.99,
+      "image": "/arrivel-1.jpg",
+      "description": "Perfect for outdoor activities with polarized lenses.",
+      "stock": 15,
+      "rating": 4.8,
+      "originalPrice": 45.99
+    },
+    {
+      "id": 106,
+      "name": "Sports",
+      "category": "Sunglasses",
+      "price": 65.99,
+      "image": "/arrivel-1.jpg",
+      "description": "Perfect for outdoor activities with polarized lenses.",
+      "stock": 15,
+      "rating": 4.8,
+      "originalPrice": 45.99
+    },
+    {
+      "id": 107,
+      "name": "Sports",
+      "category": "Sunglasses",
+      "price": 65.99,
+      "image": "/arrivel-1.jpg",
+      "description": "Perfect for outdoor activities with polarized lenses.",
+      "stock": 15,
+      "rating": 4.8,
+      "originalPrice": 45.99
+    },
+    {
+      "id": 108,
+      "name": "Sports",
+      "category": "Sunglasses",
+      "price": 65.99,
+      "image": "/arrivel-1.jpg",
+      "description": "Perfect for outdoor activities with polarized lenses.",
+      "stock": 15,
+      "rating": 4.8,
+      "originalPrice": 45.99
+    }
+
+  ]
+}

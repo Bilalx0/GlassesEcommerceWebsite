@@ -11,12 +11,6 @@ const Navbar = () => {
       <nav className="bg-white shadow-md relative z-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <div className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold text-gray-800">Brand</span>
-            </div>
-
-            {/* Desktop Navigation */}
             <ul className="hidden md:flex items-center space-x-8">
               <Link to="/" className='text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-4 py-2 rounded-md text-base font-medium'> Home </Link>
               <Link to="/products" className=' text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-4 py-2 rounded-md text-base font-medium'> Products</Link>
@@ -24,6 +18,12 @@ const Navbar = () => {
               <Link to="/" className=' text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-4 py-2 rounded-md text-base font-medium'> Contact </Link>
 
             </ul>
+            {/* Logo */}
+            <div className=" flex items-center">
+              <span className="text-xl font-bold text-gray-800">Brand</span>
+            </div>
+
+            {/* Desktop Navigation */}
 
             {/* Cart and Mobile Menu Button */}
             <div className="flex items-center space-x-4">

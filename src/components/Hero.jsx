@@ -1,6 +1,14 @@
 import React from 'react'
 import VerticalImageSlider from './VerticalImageSlider'
 
+const images = [
+    "/placeholder.svg?height=384&width=256&text=Image%201",
+    "/placeholder.svg?height=384&width=256&text=Image%202",
+    "/placeholder.svg?height=384&width=256&text=Image%203",
+    "/placeholder.svg?height=384&width=256&text=Image%204",
+    "/placeholder.svg?height=384&width=256&text=Image%205",
+  ]
+
 function Hero() {
 
 
@@ -19,7 +27,7 @@ function Hero() {
                 </button>
             </div>
         </div>
-        {/* <VerticalImageSlider /> */}
+        <VerticalImageSlider />
     
     </div>
 </div>
