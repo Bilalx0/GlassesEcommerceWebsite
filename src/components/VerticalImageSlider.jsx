@@ -14,16 +14,16 @@ const images = [
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   }
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000)
-    return () => clearInterval(timer)
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
   }, [])
 
   return (
@@ -60,5 +60,5 @@ const images = [
   )
 }
 
-export default VerticalImageSlider
+export default VerticalImageSlider;
 

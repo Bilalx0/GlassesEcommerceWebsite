@@ -10,6 +10,7 @@ import './index.css'
 import App from './App.jsx'
 import { DataProvider } from './context/DataProvider.jsx';
 import CartProvider from './context/CartProvider.jsx';
+import CheckoutPage from './pages/CheckoutPage.jsx';
 
 
 const router = createBrowserRouter(
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route path="" element={<Home/>} />
       <Route path="products" element={<Products/>} />
       <Route path="cart" element={<Cart/>} />
+      <Route path="checkout" element={<CheckoutPage/>} />
       <Route path="product/:id" element={<ProductDetail/>} />
     </Route>
   )
@@ -29,8 +31,7 @@ createRoot(document.getElementById('root')).render(
     <CartProvider>
   <StrictMode>
     <RouterProvider router={router}/>
-  </StrictMode>,
-      
+  </StrictMode>
     </CartProvider>
   </DataProvider>
 

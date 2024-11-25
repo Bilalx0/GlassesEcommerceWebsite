@@ -34,16 +34,26 @@ const Products = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <div>
-        
-      </div>
+    <div>
+      <section>
+  <div className="relative aspect-w-16 aspect-h-9 overflow-hidden shadow-lg">
+    <img src="/page-main-image.jpg" className="object-cover w-full h-96" alt="Autumn scene" />
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+      <h1 className="text-3xl font-bold">Products</h1>
+      <p className="mt-4 font-medium">Home / Products</p>
+    </div>
+  </div>
+</section>
+
+
+    <div className="max-w-7xl mx-auto px-4 py-20">
       <div className="flex gap-8">
         {/* Filters Sidebar */}
         <div className="w-64 flex-shrink-0">
           <div className="border rounded-lg p-4">
             <h2 className="text-lg font-semibold mb-4">FILTERS</h2>
-            
+
             {/* Availability Filter */}
             <div className="mb-6">
               <h3 className="font-medium mb-2">AVAILABILITY</h3>
@@ -113,12 +123,13 @@ const Products = () => {
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product) => (
-        <Cards key={product.id} product={product} />
-      ))}
+            {products.map((product) => (
+              <Cards key={product.id} product={product} />
+            ))}
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

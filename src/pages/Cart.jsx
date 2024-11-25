@@ -1,6 +1,7 @@
 import React from 'react';
 import { Trash2, ShoppingCart, Plus, Minus } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const { cart, removeFromCart, updateQuantity, getCartTotal } = useCart();
@@ -14,10 +15,23 @@ const Cart = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 max-w-4xl">
+    <div>
+
+    <section>
+  <div className="relative aspect-w-16 aspect-h-9 overflow-hidden shadow-lg">
+    <img src="/page-main-image.jpg" className="object-cover w-full h-96" alt="Autumn scene" />
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+      <h1 className="text-3xl font-bold">Shopping Cart</h1>
+      <p className="mt-4 font-medium">Home / Shopping Cart</p>
+    </div>
+  </div>
+</section>
+    <div className="container mx-auto  max-w-5xl py-20">
+      
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold flex items-center">
-          <ShoppingCart className="mr-3" /> Your Cart
+          Shopping Cart
         </h1>
         <span className="text-xl font-semibold">
           Total: ${getCartTotal().toFixed(2)}
@@ -84,12 +98,15 @@ const Cart = () => {
             </div>
           ))}
           <div className="text-right">
+          <Link to="/checkout">
             <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Proceed to Checkout
             </button>
+          </Link>
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };
