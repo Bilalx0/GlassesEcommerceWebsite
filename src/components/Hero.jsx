@@ -15,7 +15,7 @@ function Hero() {
 
   return (
     <div>
-    <div className="flex flex-col md:flex-row items-center justify-between pt-40">
+    <div className="flex flex-col md:flex-row items-center justify-between pt-44">
         <div className="text-left w-full">
             <h1 className="text-4xl sm:text-6xl font-bold text-gray-800">Glasses <span className='text-secondary'>& Lens</span></h1>
             <p className="mt-6 text-lg text-gray-700">Buy the best high-quality sunglasses from us.<br />More than 100 types of assortment</p>
