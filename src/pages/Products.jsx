@@ -48,10 +48,10 @@ const Products = () => {
 
 
     <div className="max-w-7xl mx-auto px-4 py-20">
-      <div className="flex gap-8">
+      <div className="flex md:flex-row gap-8 flex-col">
         {/* Filters Sidebar */}
-        <div className="w-64 flex-shrink-0">
-          <div className="border rounded-lg p-4">
+        <div className="w-72 flex-shrink-0">
+          <div className="border rounded-lg p-4 ">
             <h2 className="text-lg font-semibold mb-4">FILTERS</h2>
 
             {/* Availability Filter */}
@@ -104,13 +104,13 @@ const Products = () => {
         <div className="flex-1">
           {/* Header */}
           <div className="flex justify-between items-center mb-6">
-            <div className="text-sm">
+            <div className="text-sm hidden sm:block">
               <span className="text-gray-500">Home / Kids Glasses</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-sm">Sort by:</span>
+              <span className="text-xs">Sort by:</span>
               <select
-                className="border rounded px-2 py-1"
+                className="border rounded px-2 py-1 text-sx"
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
               >
