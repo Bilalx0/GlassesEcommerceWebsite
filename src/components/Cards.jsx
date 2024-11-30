@@ -64,7 +64,7 @@ const Cards = ({ product }) => {
             <p className="text-gray-600">{product.category}</p>
           </div>
           <div className="text-right">
-            <span className="text-xl font-bold text-blue-900">${product.price}</span>
+            <span className="text-xl font-bold text-teal-700">${product.price}</span>
             <div className="text-gray-500 line-through">${product.originalPrice}</div>
           </div>
         </div>

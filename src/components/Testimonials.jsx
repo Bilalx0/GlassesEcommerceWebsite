@@ -64,7 +64,7 @@ const Testimonials = () => {
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className=" mx-auto">
-        <h2 className="text-2xl sm:text-center font-semibold mb-12 text-gray-900">
+        <h2 className="text-2xl sm:text-center font-semibold mb-12 text-secondary">
           What Our Customers Say
         </h2>
 
@@ -101,18 +101,18 @@ const Testimonials = () => {
           {/* Navigation buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-8 p-2 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-8 p-2 rounded-full bg-primary shadow-lg hover:shadow-2xl hover:shadow-teal-400 transition-colors"
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-600" />
+            <ChevronLeft className="w-6 h-6 text-slate-100" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-8 p-2 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-8 p-2 rounded-full bg-primary shadow-lg hover:shadow-2xl hover:shadow-teal-400 transition-colors"
             aria-label="Next testimonial"
           >
-            <ChevronRight className="w-6 h-6 text-gray-600" />
+            <ChevronRight className="w-6 h-6 text-slate-100" />
           </button>
 
           {/* Slide indicators */}

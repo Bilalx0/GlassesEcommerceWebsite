@@ -15,11 +15,11 @@ function Arrivals() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl sm:text-4xl font-bold">New Arrivals</h1>
+      <div className="flex justify-between items-center mb-10">
+        <h1 className="text-2xl sm:text-4xl font-bold text-secondary">New Arrivals</h1>
         <a href="#" className="text-gray-500">See All</a>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-10">
+      <div className="flex flex-row flex-wrap md:justify-between  gap-y-14 justify-center">
       {limitedProducts.map((product) => (
         <Cards key={product.id} product={product} />
       ))}

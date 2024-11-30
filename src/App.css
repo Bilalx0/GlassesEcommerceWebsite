@@ -1,7 +1,96 @@
 body{
     font-family: "Josefin Sans", sans-serif;
+    background-color: #f4f6f6;
 }
 
 .font-gistesy{
     font-family: "Gistesy", cursive;
+}
+
+
+.bg-background {
+    background-color: #f4f6f6;
+  }
+  
+  .bg-primary {
+    background-color: #245953;
+  }
+  
+  .bg-secondary {
+    background-color: #408e91;
+  }
+  
+  .text-background {
+    color: #f4f6f6;
+  }
+  
+  .text-primary {
+    color: #245953;
+  }
+  
+  .text-secondary {
+    color: #408e91;
+  }
+  
+  .border-background {
+    border-color: #f4f6f6;
+  }
+  
+  .border-primary {
+    border-color: #245953;
+  }
+  
+  .border-secondary {
+    border-color: #408e91;
+  }
+  .ring-secondary {
+    color: #408e91;
+  }
+
+.text-accent{
+    color: #e49393;
+}
+.bg-accent{
+    background-color: #e49393;
+}
+
+/* Apply the gradient scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust scrollbar width */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #408e91, #245953); /* Gradient from secondary to primary */
+    border-radius: 6px; /* Rounded corners */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #245953, #408e91); /* Reverse gradient on hover */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f4f6f6; /* Background color of the scrollbar track */
+    border-radius: 6px;
+  }
+
+  .from-secondary {
+    --tw-gradient-from: #408e91 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(64 142 145 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.hover\:border-primary:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(36 89 83 / var(--tw-border-opacity)) /* #245953 */;
+}
+  
+
+.hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(36 89 83 / var(--tw-text-opacity)) /* #245953 */;
+}
+
+.hover\:bg-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 89 83 / var(--tw-bg-opacity)) /* #245953 */;
 }
